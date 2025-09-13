@@ -386,7 +386,7 @@ a {
     flex-wrap: wrap; /* pueda tener múltiples lineas*/
     justify-content: center;
     background: url("Images/Mask\ group.png") no-repeat center center/cover;
-
+    margin: 0 0%;
     font-family: "Outfit";
 
     }
@@ -415,15 +415,19 @@ a {
 .texto-ventaja a{
     color: #6bb42c;
 }
-
- @media (max-width: 550px) {
+@media (max-width: 1547px){
+  .tajeta-ventaja{
+    max-width: 30% !important;
+  }
+}
+ @media (max-width: 1000px) {
   .tajeta-ventaja,
   .ventajas,
   .bloque-tres,
   .bloque-tres-contenido{ 
-    justify-content:start;
-    text-align: start;
-    max-width: 100%;
+    justify-content:start !important;
+    text-align: start !important;
+    max-width: 100% !important;
   }
   .tajeta-ventaja img{
     width: 20%;
@@ -442,14 +446,18 @@ a {
     display: flex;
     flex-direction: row;
     font-family: "Outfit";
-    padding: 2% 21%;
-    margin: 0%;
-    align-items: center;
+    padding: 2%;
+    margin: 0% 19% !important;
+    justify-content: space-between;
+
+
 
 }
 .lineas-titulos{
-    width: 551px;
+    max-width: 551px;
     text-align: start;
+    justify-content: start;
+
     padding: 0;
     margin: 0;
 }
@@ -463,6 +471,7 @@ a {
 .lineas-titulos h1{
     padding: 0;
     margin: 0;
+
 }
 
 .lineas-texto p{
@@ -480,15 +489,18 @@ a {
     flex-direction: column;
     position: relative;
     max-width: 95%;
-    padding: 0 10%;
+    padding: 0%;
+    margin: 0 5% !important;
   } 
   .lineas-titulos h1, .lineas-titulos h4,
   .lineas-texto p{
     text-align:start;
-    justify-content: start;
-    padding: 0;
+    justify-content: center;
+
+    margin: 2% 10% !important;
 
   }
+
    .tarjeta-casa img{
     max-width: 100%;
 
