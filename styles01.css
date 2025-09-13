@@ -922,7 +922,7 @@ footer{
   text-align: center;
   justify-content: center;
   margin: 10px;
-  padding: 0;
+  padding: 0%;
 
 }
 .info-casas a, .info-casas p{
@@ -933,21 +933,30 @@ footer{
 }
 
 /*IMAGEN UNO CASA*/
+@media (max-width: 1900px) {
+  .contenedor-casa img{
+  max-width: 1000px;}
+}
 
 .imagen-uno-casa{
   display: flex;
   align-content: center;
   justify-content: center;
-  padding: 10px 10%;
-  margin: 0%;
+  padding: 0%;
+  margin:10px;
 }
 
 .contenedor-casa{
   overflow: hidden; /* para que la imagen no se salga de su contenedor */
-
+  margin: 0%;
+  padding: 0%;
 }
 .contenedor-casa img{
-    transition: transform 0.3s ease-in-out;}
+    transition: transform 0.3s ease-in-out;
+  margin: 0%;
+  padding: 0%;
+  width: 1270px;}
+    
 
 .contenedor-casa:hover img{
     transform: scale(1.5);
@@ -960,7 +969,7 @@ footer{
   display: flex;
   align-content: center;
   justify-content: center;
-  padding: 0% 17%;
+  padding: 0% 17% 20px;
   flex-direction: column;
 
 }
@@ -1125,6 +1134,11 @@ footer{
 
   /*Galeria*/
   
+   @media (max-width: 1900px){
+  .thumb {
+   height: 220px !important;
+  }}
+
   .contenedor-galeria{
     display: flex;
     flex-wrap: wrap;
@@ -1134,8 +1148,8 @@ footer{
   }
 
 .thumb {
-    max-height: 220px;
-    padding: 0, 10%;
+    max-height: 280px;
+    padding: 0;
 }
 .thumb:hover{
   border: solid 2px #6bb42c;
@@ -1156,7 +1170,6 @@ footer{
 
 .lightbox img {
     max-width: 100%;
-
     opacity: 0;
 
 }
@@ -1223,7 +1236,7 @@ footer{
 
   @media (max-width: 430px) {
     .thumb {
-        max-height: 120px;
+        max-height: 180px;
         padding: 0, 5%;
     }
   }
