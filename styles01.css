@@ -357,7 +357,7 @@ a {
 .bloque-tres{
     align-items: center;
     justify-content: center;
-    margin: 5% 10% 3%;
+    margin: 5% 15% 3%;
 }
 
 .bloque-tres-contenido{
@@ -442,7 +442,9 @@ a {
     display: flex;
     flex-direction: row;
     font-family: "Outfit";
-    padding: 2% 17%;
+    padding: 2% 21%;
+    margin: 0%;
+    align-items: center;
 
 }
 .lineas-titulos{
@@ -496,7 +498,7 @@ a {
 .contenedor-tarjetas{
     display: flex;
     flex-wrap: wrap; /* pueda tener múltiples lineas*/
-    margin: 0% 5%;
+    margin: 0% 10%;
     justify-content: center;
     
 }
@@ -680,9 +682,11 @@ a {
 
 /* PROCESO*/
 
+
+
 .proceso-linea {
-  margin: 5% 10%;
-  display: flex;
+  margin: 5% 17%;
+  display: flex;  
   justify-content: center;
   align-items: center;
   position: relative;

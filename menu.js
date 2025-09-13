@@ -2,7 +2,7 @@ const template = document.createElement('template');
 
   template.innerHTML= `
     <div class="menus">
-    <a href="#" class="nav-logo">
+    <a href="index.html" class="nav-logo">
                 <img src="micra-logo.png" class="imagen-logo">
             </a>
             
