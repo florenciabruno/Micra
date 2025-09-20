@@ -1056,18 +1056,18 @@ footer{
 
   .revestimientos-contenedor{
     display: flex;
-    padding: 3% 17%;
+    padding: 10px 17% 10px;
     flex-direction: column;
   }
   .revestimientos-contenedor h2, .revestimientos-contenedor h3{
-    padding: 0px 0px 10px;
+    padding: 0px 0px 5x;
     margin: 0;
     justify-content: start;
     text-align: start;
   }
   .revestimientos-contenedor h2{
-    color: #6bb42c;
-    padding: 5px 0px;
+    color: #292928;
+    padding: 0px;
   }
 
   .columnas-detalles{
@@ -1111,8 +1111,8 @@ footer{
   @media (max-width: 800px) {
       .revestimientos-contenedor, .columnas-detalles{
         flex-direction: column;
-        margin: 10px 0;
-        padding: 5%, 0%;
+        margin: 0;
+        padding: 3%, 0% 0%;
         justify-content: start;
 
       }
@@ -1149,18 +1149,25 @@ footer{
    @media (max-width: 1900px){
   .thumb {
    height: 220px !important;
-  }}
+  }
+  .thumb-2 {
+   max-height: 165px !important;
+  }}  
 
   .contenedor-galeria{
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-between;
-    margin: 10px 17%;
+    margin: 0px 17%;
   }
 
 .thumb {
     max-height: 280px;
+    padding: 0;
+}
+.thumb-2{
+    max-height: 213px;
     padding: 0;
 }
 .thumb:hover{

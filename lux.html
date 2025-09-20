@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Micra</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="styles01.css">
+<script src="menu.js"></script>
+<script src="banner.js"></script>
+<script src="whatsapp.js"></script>
+<script src="footer.js"></script>
+<body>
+ <header>
+        
+    <!--banner de redes-->
+    <banner-component></banner-component>
+        <!--MENU-->
+    <menu-component></menu-component>
+
+       
+    </header>
+    <whatsapp-component></whatsapp-component>
+
+    <!--BANNER-->
+
+
+<div class="banner-CASA" style="background: url('Images/FOTO\ MODELO\ NOX\ Y\ LUX.jpg') no-repeat center center/cover;">
+    <div class="banner-casa-contenido">
+        <div class="banner-casa-titulo">
+            <h1>LUX</h1>
+            <p> <a href="index.html">Home</a> > Modelos</P>
+        </div>
+    </div>
+   
+</div>
+
+
+
+<!--TIPO-UNO-->
+<div class="info-casa-uno">
+    <h1>Simple, doble o triple</h1>
+</div>
+
+<div class="imagen-uno-casa" id="simple">
+    <div class="contenedor-casa">
+        <img src="Images/l-_lux-1.jpg" alt="">
+    </div>
+</div>
+
+<div class="info-casa-uno">
+        <p>El modelo Lux es un modelo de vanguardia destinado a brillar. Con revestimiento de chapa
+negra o blanca, la vivienda, al igual que los otros modelos, puede ser de simple, doble o
+triple. Comparten los mismos planos y características. </p>
+
+
+</div>
+
+
+<!--GALERIA-->
+<div class="contenedor-galeria">
+  <a href="#img1">
+    <img class="thumb" src="Images/l-_lux-2.jpg">
+  </a>
+  <div class="lightbox" id="img1">
+    <div class="lightbox-content">
+      <a href="#img3" class="light-btn btn-prev"> < </a>
+            <a href="#_" class="btn-close">X</a>
+      <img src="Images/l-_lux-2.jpg">
+      <a href="#img2" class="light-btn btn-next"> > </a>
+    </div>
+  </div>
+
+  <a href="#img2">
+    <img class="thumb" src="Images/l-_lux-3.jpg">
+  </a>
+  <div class="lightbox" id="img2">
+    <div class="lightbox-content">
+      <a href="#img1" class="light-btn btn-prev"><</a>
+            <a href="#_" class="btn-close">X</a>
+      <img src="Images/l-_lux-3.jpg">
+      <a href="#img3" class="light-btn btn-next">></a>
+    </div>
+  </div>
+
+  <a href="#img3">
+    <img class="thumb" src="Images/l-_lux-4.jpg">
+  </a>
+  <div class="lightbox" id="img3">
+    <div class="lightbox-content">
+      <a href="#img2" class="light-btn btn-prev"><</a>
+      <a href="#_" class="btn-close">X</a>
+      <img src="Images/l-_lux-4.jpg">
+      <a href="#img1" class="light-btn btn-next">></a>
+    </div>
+  </div>
+</div>  
+
+<!--REVESTIMIENTO-->
+
+<div class="revestimientos-contenedor" id="revestimientos">
+    <h2>Detalles</h2>
+    <h3>Paleta de colores</h3>
+    <div class="columnas-detalles">
+
+        <div class="una-col-detalles">
+            <div class="colores-paleta">
+                <div class="bloque-color" style="background-color: #000000"> </div>
+                <p>Negro</p>
+            </div>
+            <div class="colores-paleta">
+                <div class="bloque-color" style= "background-color: #d1d0d0;"> </div>
+                <p>Blanco</p>
+            </div>
+        </div>
+
+        <div class="otra-col-detalles">
+           <p>Mobiliario: No incluido. </p>
+           <p>Pérgola: incluida (eucalipto pre-pintada con protección para exteriores).</p>
+            <p>Revestimiento exterior: chapa.</p>
+            <p>Aberturas: premium a elección.</p>
+        </div>
+    </div>
+</div>
+
+
+<!--FOOTER-->
+    <footer>
+        <footer-component></footer-component>
+    </footer>
+
+
+</body>
+<script>
+/*Galeria*/
+
+document.querySelectorAll('.lightbox').forEach(box => {
+  box.addEventListener('click', function(e) {
+    // Si click en el fondo (el propio .lightbox, no en .lightbox-content ni sus hijos)
+    if (e.target === box) {
+      window.location.hash = '_';  // Esto quita el :target del lightbox
+    }
+  });
+});
+
+</script>
+</html>
