@@ -292,65 +292,99 @@ a {
 
 /* Banner debajo del menú */
 .banner {
-    position: relative;
-    max-width: 100%;
-    height: 600px; 
-    background: url("Images/FOTO\ CABECERA.jpg") no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  color: #fff;
 }
 
-.banner::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6); 
-    }
+.banner-slider {
+  display: flex;
+ max-width: 100%; 
+ height: 600px;
+  transition: transform 0.8s ease-in-out;
+}
+
+.banner-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+/* FONDOS */
+.slide-1 {
+  background-image: url("Images/FOTO\ CABECERA2.jpg");
+}
+
+.slide-2 {
+  background-image: url("Images/FOTO CABECERA.jpg");
+}
 
 .banner-content {
-    position: relative;
-    padding-left: 0px;
-    margin-left: 0px;
-    text-align: left;
-    z-index: 1;
-    font-family: "Outfit";
+  position: relative;
+  z-index: 2;
+  margin-left: 17%;
+  max-width: 500px;
+  font-family: "Outfit";
+}
+
+.banner-content h1 { 
+  font-size: 2.7rem; 
+  margin-right: 20%; 
+  max-width: 100%; } 
+
+.banner-content p { 
+  font-size: 1.3rem; 
+  margin-right: 20%; 
+  max-width: 100%; }
+
+/* flechitas de banner */
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 0 15px;
+  z-index: 10;
 
 }
 
-.banner-content h1 {
-    font-size: 2.5rem;
-    margin-right: 30%;
-    max-width: 30%;
-  }
+.prev { left: 20px; }
+.next { right: 20px; }
 
-
-
-.banner-content p {
-    font-size: 1.2rem;
-    margin-right: 30%;
-    max-width: 30%;
-
+.arrow:hover {
+  background: rgba(0,0,0,0.7);
+  transition: background 0.3s;
 }
 @media (max-width: 1232px) {
-  .banner{
-    align-items: stretch; 
-    padding: 0;
-    margin: 0;
-    height: 100%;
-  }  
-  .banner-content{
-    margin: 10%;
+  .banner {
+    min-height: 60vh;
+    height: auto;
   }
-    .banner-content p, .banner-content h1{
+
+  .banner-content {
+    margin: 10%;
     max-width: 100%;
   }
 }
+
+
 
 /* Ventajas */
 

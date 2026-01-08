@@ -8,6 +8,7 @@
 <script src="banner.js"></script>
 <script src="whatsapp.js"></script>
 <script src="footer.js"></script>
+<link rel="icon" href="icons/micra-icono-sobreverde.png" type="image/x-icon">
 
 <body>
     <header id="Home">
@@ -21,21 +22,39 @@
     </header>
     <whatsapp-component></whatsapp-component>
     <main>
+
      <!-- Banner -->
     <div class="banner">
+  <div class="banner-slider">
+
+    <div class="banner-slide slide-1">
       <div class="banner-content">
-        <h1>Sistema modular de alta calidad</h1>
-        <p>Micra es la primera Tini House multi-propósito de Argentina. Durabilidad, estilo y rápida instalación. Elegí tu modelo.</p>
+        <h1>Único sistema con instalación en cuatro días</h1>
+        <p>El sistema es un modelo con patente exclusiva. Los módulos Micra llegan embalados. Su instalación es rápida y no altera el entorno.</p>
       </div>
     </div>
-    </main>
+
+    <div class="banner-slide slide-2">
+      <div class="banner-content">
+        <h1>Sistema modular de alta calidad</h1>
+        <p>Micra es la primera Tiny House multi-propósito de Argentina. Durabilidad, estilo y rápida instalación. Elegí tu modelo.</p>
+        </div>
+    </div>
+
+  </div>
+
+  <!-- flechitas -->
+  <button class="arrow prev">‹</button>
+  <button class="arrow next">›</button>
+</div>
+
 
     <!-- Ventajas -->
 
     <div class="bloque-tres">
         <div class="bloque-tres-contenido" id="ventajas">
             <p>Ventajas</p>
-            <h1>Porque comprar una Micra</h1>  
+            <h1>Por qué comprar una Micra</h1>  
         </div>
 
         <div class="ventajas">
@@ -83,7 +102,7 @@
                 <img src="icons/instalacion.svg" alt="">
                 <div class="texto-ventaja">
                     <h3>Rápida Instalación</h3>
-                    <p>Una vez firmado el contrato y finalizado el proceso de personalización, tu micra estará lista e instalada en aproximadamente 60 días.</p>
+                    <p>Tu Micra se fabrica en 60 días. Llega embalada y se instala en 4 días sin alterar el entorno. Sistema único en Latinoamerica con patente exclusiva <ahref="page-construction.html">(ver especificaciones) </a></p>
                 </div>  
             </div>
         </div>
@@ -95,7 +114,7 @@
 <div class="tarjetas-lineas-titulos" id="Modelos">
     <div class="lineas-titulos">
         <h4>Línea de productos</h4>  
-        <h1>Los Módelos Micra</h1>
+        <h1>Los Modelos Micra</h1>
     </div>
 
     <div class="lineas-texto">
@@ -234,5 +253,32 @@
     document.querySelector('.button-proceso[data-step="' + step + '"]').classList.remove('activo');
   });
 });
+
+let index = 0;
+const slider = document.querySelector(".banner-slider");
+const slides = document.querySelectorAll(".banner-slide");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+
+function showSlide(i) {
+  slider.style.transform = `translateX(-${i * 100}%)`;
+}
+
+function nextSlide() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}
+
+function prevSlide() {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+}
+
+next.addEventListener("click", nextSlide);
+prev.addEventListener("click", prevSlide);
+
+// Auto
+setInterval(nextSlide, 6000);
+
 </script>
 </html>

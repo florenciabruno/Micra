@@ -13,6 +13,7 @@ const footertemplate = document.createElement('template');
             <div class="f-una-columna">
                 <a href="index.html#proceso">Proceso</a>
                 <a href="page-construction.html">Representantes</a>
+                <a href="page-construction.html">Especificaciones</a>
             </div>
             <div class="f-una-columna">
                 <p>3455441225</p>
