@@ -32,7 +32,7 @@ const template = document.createElement('template');
                         <img src="icons/Vector.svg"></a>
                     </li>
                     <li class="nav-item">
-                        <a href="page-construction.html" class="nav-link">Especificaciones
+                        <a href="especificaciones.html" class="nav-link">Especificaciones
                         <img src="icons/Vector.svg"></a>
                     </li>
                 </ul>

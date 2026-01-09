@@ -1309,3 +1309,165 @@ footer{
   padding: 0%;
   margin: 0%;
 }
+
+/* lineal del tiempo */
+
+#timeline {
+  display: flex;
+  background-color: #6bb42c;
+
+  &:hover {
+    .tl-item {
+      width: 23.3333%;
+    }
+  }
+}
+
+.tl-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  width: 40%;
+  height: 100vh;
+  min-height: 600px;
+  color: #fff;
+  overflow: hidden;
+  transition: width 0.5s ease;
+  
+  &:before, &:after {
+    transform: translate3d(0, 0, 0);
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+  }
+
+  &:after {
+    background: transparentize(#000000, 0.10);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  &:before {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 75%);
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, 0, 0) translateY(50%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  &:hover { 
+    width: 40% !important;
+    
+    &:after {
+      opacity: 0;
+    }
+
+    &:before {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) translateY(0);
+      transition: opacity 1s ease, transform 1s ease 0.25s;
+    }
+    
+    .tl-content {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.75s ease 0.5s;
+    }
+
+    .tl-bg {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.tl-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 1;
+  text-align:center;
+  margin: 0 1.2em;
+  top: 55%;
+  opacity: 0;}
+  
+ .tl-content h1 {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 1.10rem;
+    font-weight: normal;
+  }
+
+
+.tl-year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  
+ p {
+  width: 60px;
+  height: 60px;
+  font-size: 1.728rem;
+  color: #fafafa;
+  background-color: #6bb42c;
+
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+}
+
+.tl-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  background-size: cover;
+  background-position: center center;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+
+ @media (max-width: 900px) {
+  .tl-content h1 {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: normal;
+
+ }
+ .tl-item &:hover { 
+    width: 80% !important;}
+}
+
+/*preguntas desplegables*/
+
+.faq {
+  margin-bottom: 12px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-size: 1.1rem;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: " +";
+  color: #6bb42c;
+
+  font-weight: bold;
+}
+
+.faq[open] summary::after {
+  content: " −";
+}
+
+.faq p {
+  margin-top: 10px;
+  color: #555;
+}
